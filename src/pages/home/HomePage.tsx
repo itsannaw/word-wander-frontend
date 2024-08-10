@@ -1,3 +1,4 @@
+import Pagination from "../../components/pagination/Pagination";
 import Post from "../../components/post/Post";
 import Select from "../../components/select/Select";
 
@@ -10,6 +11,7 @@ const HomePage = () => {
             </div>
             <Select />
             <Post />
+            <Pagination />
         </div>
     );
 };
