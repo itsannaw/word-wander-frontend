@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+    const navigate = useNavigate();
     return (
         <div className="relative z-10 flex w-full max-w-[500px] flex-col items-start justify-start rounded-xl bg-white pb-10 pl-10 pr-10 pt-10 shadow-2xl">
             <p className="w-full text-center font-serif text-4xl font-medium leading-snug">Login</p>
@@ -26,7 +27,15 @@ const LoginForm = () => {
                     />
                 </div>
                 <div className="relative">
-                    <button className="ease inline-block w-full rounded-lg bg-indigo-500 pb-4 pl-5 pr-5 pt-4 text-center text-xl font-medium text-white transition duration-200 hover:bg-indigo-600">
+                    <button
+                        onClick={() => {
+                            navigate("/");
+                        }}
+                        name="submit"
+                        value="Submit"
+                        type="submit"
+                        className="ease inline-block w-full rounded-lg bg-indigo-500 pb-4 pl-5 pr-5 pt-4 text-center text-xl font-medium text-white transition duration-200 hover:bg-indigo-600"
+                    >
                         Submit
                     </button>
                 </div>
