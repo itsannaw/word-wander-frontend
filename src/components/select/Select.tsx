@@ -1,9 +1,9 @@
 const Select = () => {
     return (
-        <form className="mx-auto w-full max-w-xs">
+        <form className="w-full max-w-xs">
             <label
                 htmlFor="sort"
-                className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                className="mb-[5px] block text-sm font-medium text-gray-900 dark:text-white"
             >
                 Select an option
             </label>

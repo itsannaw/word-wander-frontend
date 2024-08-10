@@ -1,6 +1,6 @@
 const Pagination = () => {
     return (
-        <nav className="flex items-center justify-center border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
+        <nav className="flex items-center justify-center py-3">
             <ul className="flex h-8 items-center -space-x-px text-sm">
                 <li>
                     <a
