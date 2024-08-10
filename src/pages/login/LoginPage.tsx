@@ -1,11 +1,11 @@
-import SignUpForm from "../../components/signup/SignUpForm";
+import LoginForm from "../../components/login/LoginForm";
 
-const SignUpPage = () => {
+const LoginPage = () => {
     return (
         <div className="flex h-screen items-center justify-center">
-            <SignUpForm />
+            <LoginForm />
         </div>
     );
 };
 
-export default SignUpPage;
+export default LoginPage;
