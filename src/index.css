@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: 'Cambria', font-serif;
+}
+
+main {
+  padding: 1rem 2rem;
+}
