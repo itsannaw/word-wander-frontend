@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Post = () => {
     return (
-        <div className="container mx-auto border-2 px-6 py-10">
+        <div className="container mx-auto border-2 px-6 py-10 dark:border-gray-700 rounded-xl">
             <div className="lg:flex lg:items-center">
                 <img
                     className="h-72 w-full rounded-xl object-cover lg:mx-6 lg:h-72 lg:w-1/3"
@@ -13,19 +13,19 @@ const Post = () => {
                 <div className="mt-6 lg:mx-6 lg:mt-0 lg:w-1/2">
                     <Link
                         to="/details"
-                        className="mt-4 block text-2xl font-semibold text-gray-800 hover:underline md:text-3xl"
+                        className="mt-4 block text-2xl font-semibold text-gray-800 hover:underline dark:text-gray-200 md:text-3xl"
                     >
                         All the features you want to know
                     </Link>
 
-                    <p className="mt-3 text-sm text-gray-500 md:text-sm">
+                    <p className="mt-3 text-sm text-gray-500 md:text-sm dark:text-gray-200">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis sint
                         autem nesciunt, laudantium quia tempore delect
                     </p>
 
                     <Link
                         to="/details"
-                        className="mt-2 inline-block text-blue-500 underline hover:text-blue-400"
+                        className="mt-2 inline-block text-indigo-500 underline hover:text-indigo-400"
                     >
                         Read more
                     </Link>
@@ -38,8 +38,8 @@ const Post = () => {
                         />
 
                         <div className="mx-4">
-                            <h1 className="text-sm text-gray-700">Amelia. Anderson</h1>
-                            <p className="text-sm text-gray-500">Lead Developer</p>
+                            <h1 className="text-sm text-gray-700 dark:text-gray-300">Amelia. Anderson</h1>
+                            <p className="text-sm text-gray-500 dark:text-gray-400">Lead Developer</p>
                         </div>
                     </div>
                 </div>

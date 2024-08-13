@@ -8,7 +8,7 @@ const DarkModeToggle: React.FC = () => {
 
     return (
         <button onClick={toggleTheme}>
-            <img className="w-10" src={isDarkTheme ? Moon : Sun} alt="dark mode toggle" />
+            <img className="w-9" src={isDarkTheme ? Moon : Sun} alt="dark mode toggle" />
         </button>
     );
 };

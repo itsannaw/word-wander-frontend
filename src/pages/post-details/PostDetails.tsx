@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
 import CommentForm from "../../components/comments/CommentForm";
 import CommentsSection from "../../components/comments/CommentsSection";
 
 const PostDetails = () => {
     return (
         <section className="mt-10">
+            <Link className="absolute hover:text-indigo-500 hover:underline" to="/">
+                ← Back to Home
+            </Link>
             <div
                 className="relative mx-auto mb-4 w-full max-w-screen-md md:mb-0"
                 style={{ height: "24em" }}
@@ -33,7 +37,7 @@ const PostDetails = () => {
                 </div>
             </div>
 
-            <div className="mx-auto mt-12 max-w-screen-md px-4 text-lg leading-relaxed text-gray-700 lg:px-0">
+            <div className="mx-auto mt-12 max-w-screen-md px-4 text-lg leading-relaxed text-gray-700 dark:text-gray-300 lg:px-0">
                 Advantage old had otherwise sincerity dependent additions. It in adapted natural
                 hastily is justice. Six draw you him full not mean evil. Prepare garrets it expense
                 windows shewing do an. She projection advantages resolution son indulgence. Part

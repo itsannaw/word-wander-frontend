@@ -2,49 +2,49 @@ import { Link } from "react-router-dom";
 
 const SignUpForm = () => {
     return (
-        <div className="relative z-10 flex w-full max-w-[500px] flex-col items-start justify-start rounded-xl bg-white pb-10 pl-10 pr-10 pt-10 shadow-2xl">
+        <div className="relative z-10 flex w-full max-w-[500px] flex-col items-start justify-start rounded-xl bg-white pb-10 pl-10 pr-10 pt-10 shadow-2xl dark:bg-gray-700">
             <p className="w-full text-center font-serif text-4xl font-medium leading-snug">
                 Sign up for an account
             </p>
             <div className="relative mb-0 ml-0 mr-0 mt-6 w-full space-y-8">
                 <div className="relative">
-                    <p className="absolute -mt-3 mb-0 ml-2 mr-0 bg-white pb-0 pl-2 pr-2 pt-0 font-medium text-gray-600">
+                    <p className="absolute -mt-3 mb-0 ml-2 mr-0 bg-white pb-0 pl-2 pr-2 pt-0 font-medium text-gray-600 dark:bg-gray-700 dark:text-gray-200">
                         Username
                     </p>
                     <input
                         placeholder="John"
                         type="text"
-                        className="mb-0 ml-0 mr-0 mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400 focus:border-black focus:outline-none"
+                        className="mb-0 ml-0 mr-0 mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400 focus:border-black focus:outline-none dark:border-gray-400 dark:bg-gray-700 dark:focus:border-gray-100"
                     />
                 </div>
                 <div className="relative">
-                    <p className="absolute -mt-3 mb-0 ml-2 mr-0 bg-white pb-0 pl-2 pr-2 pt-0 font-medium text-gray-600">
+                    <p className="absolute -mt-3 mb-0 ml-2 mr-0 bg-white pb-0 pl-2 pr-2 pt-0 font-medium text-gray-600 dark:bg-gray-700 dark:text-gray-200">
                         Email
                     </p>
                     <input
                         placeholder="123@ex.com"
                         type="text"
-                        className="mb-0 ml-0 mr-0 mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400 focus:border-black focus:outline-none"
+                        className="mb-0 ml-0 mr-0 mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400 focus:border-black focus:outline-none dark:border-gray-400 dark:bg-gray-700 dark:focus:border-gray-100"
                     />
                 </div>
                 <div className="relative">
-                    <p className="absolute -mt-3 mb-0 ml-2 mr-0 bg-white pb-0 pl-2 pr-2 pt-0 font-medium text-gray-600">
+                    <p className="absolute -mt-3 mb-0 ml-2 mr-0 bg-white pb-0 pl-2 pr-2 pt-0 font-medium text-gray-600 dark:bg-gray-700 dark:text-gray-200">
                         Password
                     </p>
                     <input
                         placeholder="Password"
                         type="password"
-                        className="mb-0 ml-0 mr-0 mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400 focus:border-black focus:outline-none"
+                        className="mb-0 ml-0 mr-0 mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400 focus:border-black focus:outline-none dark:border-gray-400 dark:bg-gray-700 dark:focus:border-gray-100"
                     />
                 </div>
                 <div className="relative">
-                    <p className="absolute -mt-3 mb-0 ml-2 mr-0 bg-white pb-0 pl-2 pr-2 pt-0 font-medium text-gray-600">
+                    <p className="absolute -mt-3 mb-0 ml-2 mr-0 bg-white pb-0 pl-2 pr-2 pt-0 font-medium text-gray-600 dark:bg-gray-700 dark:text-gray-200">
                         Confirm password
                     </p>
                     <input
                         placeholder="Confirm password"
                         type="password"
-                        className="mb-0 ml-0 mr-0 mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400 focus:border-black focus:outline-none"
+                        className="mb-0 ml-0 mr-0 mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400 focus:border-black focus:outline-none dark:border-gray-400 dark:bg-gray-700 dark:focus:border-gray-100"
                     />
                 </div>
                 <div className="relative">
@@ -53,9 +53,12 @@ const SignUpForm = () => {
                     </button>
                 </div>
             </div>
-            <span className="flex justify-center w-full mt-4 gap-2 bg-white font-medium text-gray-600">
+            <span className="mt-4 flex w-full justify-center gap-2 font-medium text-gray-600 dark:text-gray-300">
                 Already have an account?{" "}
-                <Link className="text-indigo-500" to="/login">
+                <Link
+                    className="text-indigo-500 hover:underline dark:hover:text-indigo-400"
+                    to="/login"
+                >
                     Login
                 </Link>
             </span>

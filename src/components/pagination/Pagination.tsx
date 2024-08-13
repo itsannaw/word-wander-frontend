@@ -45,7 +45,7 @@ const Pagination = () => {
                     <a
                         href="#"
                         aria-current="page"
-                        className="z-10 flex h-8 items-center justify-center border border-blue-300 bg-blue-50 px-3 leading-tight text-blue-600 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+                        className="z-10 flex h-8 items-center justify-center border border-indigo-300 bg-indigo-50 px-3 leading-tight text-indigo-600 hover:bg-indigo-100 hover:text-indigo-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
                     >
                         3
                     </a>
