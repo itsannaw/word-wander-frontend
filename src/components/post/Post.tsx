@@ -43,7 +43,7 @@ const Post: React.FC<{ content: PostContent }> = ({ content }) => {
                         {content.title}
                     </button>
 
-                    <p className="mt-3 text-sm text-gray-500 dark:text-gray-200 md:text-sm">
+                    <p className="mt-3 line-clamp-2 text-sm text-gray-500 dark:text-gray-200 md:text-sm">
                         {content.description}
                     </p>
 
