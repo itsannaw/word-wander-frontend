@@ -1,5 +1,5 @@
 import React from "react";
-import cat from "../../assets/cat.jpg";
+import notFound from "../../assets/not_found.jpg";
 import { useNavigateWithParams } from "../../hooks/useNavigateWithParams";
 
 interface User {
@@ -28,8 +28,11 @@ const Post: React.FC<{ content: PostContent }> = ({ content }) => {
             <div className="lg:flex lg:items-center">
                 <img
                     className="h-72 w-full rounded-xl object-cover lg:mx-6 lg:h-72 lg:w-1/3"
-                    src={content.image_url ? `http://localhost:3000${content.image_url}` : cat}
+                    src={content.image_url ? `http://localhost:3000${content.image_url}` : notFound}
                     alt=""
+                    onError={(e) => {
+                        e.currentTarget.src = notFound;
+                    }}
                 />
 
                 <div className="mt-6 lg:mx-6 lg:mt-0 lg:w-1/2">
