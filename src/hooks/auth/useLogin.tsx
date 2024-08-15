@@ -13,14 +13,14 @@ const useLogin = () => {
     const [error, setError] = useState<string | null>(null);
     const { login } = useAuthStore.getState();
 
-    console.log("useLogin called");
-
     const loginUser = async (credentials: Credentials) => {
         setLoading(true);
         setError(null);
         try {
             const response = await axiosInstance.post(api.login, credentials);
-            localStorage.setItem("token", response.data.token);
+            localStorage.setItem("token", response.headers["authorization"]);
+            console.log(response.data.data);
+            localStorage.setItem("userId", response.data.data.id);
             login();
         } catch (error: unknown) {
             setError((error as Error).message || "Login failed");

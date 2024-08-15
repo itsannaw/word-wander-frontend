@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import DarkModeToggle from "../toggle/DarkModeToggle";
+import useAuthStore from "../../store/useAuthStore";
+import LogoutButton from "../buttons/logout/LogoutButton";
 
 const Navbar = () => {
+    const { isLoggedIn } = useAuthStore();
     return (
         <nav className="border-gray-200">
             <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between">
@@ -15,12 +18,18 @@ const Navbar = () => {
                 </Link>
                 <div className="flex items-center gap-4">
                     <DarkModeToggle />
-                    <Link className="hover:text-indigo-500 hover:underline" to="/signup">
-                        Sign Up
-                    </Link>
-                    <Link className="hover:text-indigo-500 hover:underline" to="/login">
-                        Login
-                    </Link>
+                    {isLoggedIn ? (
+                        <LogoutButton />
+                    ) : (
+                        <>
+                            <Link className="hover:text-indigo-500 hover:underline" to="/signup">
+                                Sign Up
+                            </Link>
+                            <Link className="hover:text-indigo-500 hover:underline" to="/login">
+                                Login
+                            </Link>
+                        </>
+                    )}
                 </div>
             </div>
         </nav>

@@ -11,10 +11,13 @@ const useAuthStore = create(
     persist<AuthStore>(
         (set) => ({
             isLoggedIn: !!localStorage.getItem("token"),
-            login: () => set({ isLoggedIn: true }),
+            login: () => {
+                set({ isLoggedIn: true });
+            },
             logout: () => {
                 set({ isLoggedIn: false });
                 localStorage.removeItem("token");
+                localStorage.removeItem("userId");
             },
         }),
         {

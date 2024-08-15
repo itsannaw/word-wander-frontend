@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import useLogin from "../../hooks/auth/useLogin";
+import { emailPattern } from "../../consts/patterns";
+import Loader from "../loader/Loader";
 
 interface LoginFormValues {
     email: string;
@@ -40,7 +42,13 @@ const LoginForm = () => {
                     <input
                         placeholder="123@ex.com"
                         type="text"
-                        {...register("email", { required: "Email is required" })}
+                        {...register("email", {
+                            required: "Email is required",
+                            pattern: {
+                                value: emailPattern,
+                                message: "Invalid email address",
+                            },
+                        })}
                         className={`mb-0 ml-0 mr-0 mt-2 block w-full rounded-md border ${errors.email ? "border-red-500" : "border-gray-300"} bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400 focus:border-black focus:outline-none dark:border-gray-400 dark:bg-gray-700 dark:focus:border-gray-100`}
                     />
                     {errors.email && <p className="text-sm text-red-500">{errors.email.message}</p>}
@@ -61,7 +69,7 @@ const LoginForm = () => {
                 </div>
                 <div className="relative">
                     {loading ? (
-                        <p>Loading...</p>
+                        <Loader />
                     ) : (
                         <button
                             type="submit"

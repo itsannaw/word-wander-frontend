@@ -13,7 +13,6 @@ const useLogout = () => {
         setError(null);
         try {
             await axiosInstance.delete(api.logout);
-            localStorage.removeItem("token");
             logout();
         } catch (error: unknown) {
             setError((error as Error).message || "Logout failed");
